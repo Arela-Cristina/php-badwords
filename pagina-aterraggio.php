@@ -6,10 +6,10 @@ $inputLastName = $_POST['lastName'];
 $inputAccessCode = $_POST['accessCode'];
 
 //Creo altra variavile per formare un solo paragrafo tra le mie prime due variabili.
-$paragraph = 'Welcome to Security Portal user acces level number'; 
+$paragraph = 'Welcome to Security Portal '. $inputLastName . ' access level '. $inputAccessCode; 
 
 //Creo altra volta il paragrapho ma con il testo che io vorrei replace to ***
-$newParagraph = str_replace('number', '* * *',  $paragraph);
+$newParagraph = str_replace($inputAccessCode, '* * *', $paragraph);
 ?>
 
 
